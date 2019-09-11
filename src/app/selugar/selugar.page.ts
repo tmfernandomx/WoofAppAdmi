@@ -9,6 +9,7 @@ import { AuthService } from '../servicios/auth.service';
 import { NavController } from '@ionic/angular';
 
 
+
 @Component({
   selector: 'app-selugar',
   templateUrl: './selugar.page.html',
@@ -22,7 +23,9 @@ export class SelugarPage implements OnInit {
 
 
   constructor(public authservice: AuthService, public fundacionesservice : FundacionesService, public navCtrl: NavController,
-    private datoservice: DatosfService, private activateRoute: ActivatedRoute,
+    private datoservice: DatosfService, 
+    private activateRoute: ActivatedRoute,
+
     ) { 
 
 
@@ -46,6 +49,5 @@ export class SelugarPage implements OnInit {
      this.datoservice.getRegistros().subscribe(res => this.fundaciones=res)
   }
 
- 
  
 }

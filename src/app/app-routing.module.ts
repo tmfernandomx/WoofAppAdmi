@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tienda', pathMatch: 'full' },
+  { path: '', redirectTo: 'selugar', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'home/:id', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'eventos', loadChildren: './paginas/eventos/eventos.module#EventosPageModule' },
@@ -15,14 +15,16 @@ const routes: Routes = [
   { path: 'selugar', loadChildren: './selugar/selugar.module#SelugarPageModule' },
   { path: 'veterinarias', loadChildren: './veterinarias/veterinarias.module#VeterinariasPageModule' },
   { path: 'mapav', loadChildren: './mapav/mapav.module#MapavPageModule' },
-  { path: 'tienda', loadChildren: './paginas/tienda/tienda.module#TiendaPageModule' }
+  { path: 'tienda', loadChildren: './paginas/tienda/tienda.module#TiendaPageModule' },
+  { path: 'informacion-a', loadChildren: './informacion-a/informacion-a.module#InformacionAPageModule' },
+  { path: 'informacion-a/:id', loadChildren: './informacion-a/informacion-a.module#InformacionAPageModule' }
 
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+     ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
