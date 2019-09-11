@@ -1,5 +1,7 @@
 {
   "name": "WoofAppAdmi",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
