@@ -18,7 +18,8 @@ export class IngresarPage implements OnInit {
   
   onSubmitLogin(){
     this.authService.login(this.email, this.password).then(res=>{
-      this.router.navigate(['/tabs/informacion']);
+      // this.router.navigate(['/tabs/informacion']);
+      location.assign('tabs/informacion');
     }).catch(err=>alert('Los datos son incorrectos o no existe el usuario'))
   }
 }
